@@ -7,7 +7,7 @@
 Um sistema de help desk completo e funcional, desenvolvido para a gestão de chamados internos do setor de T.I. , otimizado para rodar em um ambiente de servidor local com XAMPP e compatível com versões mais antigas de PHP.
 
 ### Demonstração do Sistema
-(![Demonstração do Sistema de Chamados](demonstracao.gif))
+(![Demonstração do Sistema de Chamados](chamdos_NUTIC.gif))
 
 ---
 
