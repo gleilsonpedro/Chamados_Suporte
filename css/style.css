@@ -1,0 +1,242 @@
+/* --- PALETA DE CORES UX (TEMA SUAVE E COM CONTRASTE) --- */
+:root {
+    --cor-primaria: #0d6efd;      
+    --cor-primaria-hover: #0b5ed7; 
+    --cor-fundo: #e9ecef;         
+    --cor-card: #ffffff;         
+    --cor-header-fundo: #212529;  
+    --cor-header-texto: #ffffff;   
+    --cor-texto: #212529;         
+    --cor-texto-suave: #6c757d;  
+    --cor-borda: #dee2e6;         
+    --cor-status-aberto: #ffc107;   
+    --cor-status-pendente: #0dcaf0; 
+    --cor-status-fechado: #198754;  
+    --cor-destaque-novo: #fff3cd;   
+}
+
+/* --- ESTILOS GERAIS --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    margin: 0;
+    color: var(--cor-texto);
+}
+.container, .container-full {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--cor-card);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 8px;
+    display: flex;
+    gap: 25px;
+}
+.container-full { flex-direction: column; }
+.page-title { text-align: center; color: var(--cor-texto); margin-top: 25px; font-weight: 300; font-size: 1.8em; }
+.welcome-container { text-align: center; padding-top: 100px; }
+.welcome-container h1 { font-size: 4em; color: var(--cor-primaria); }
+
+/* --- CABEÇALHO COM DESTAQUE --- */
+.site-header {
+    background-color: var(--cor-header-fundo);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+}
+.site-header .branding { display: flex; align-items: center; gap: 15px; }
+.site-header .logo { font-size: 2.5em; }
+.site-header .titles h1 { 
+    margin: 0; 
+    color: var(--cor-header-texto);
+    font-size: 1.8em; 
+}
+.site-header .titles p { 
+    margin: 0; 
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300; 
+}
+.site-header .nav-button {
+    padding: 10px 20px;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
+}
+.site-header .nav-button:hover { background-color: var(--cor-primaria-hover); }
+
+/* --- PAINÉIS E LISTAS --- */
+.panel-left { flex: 3; }
+.panel-right { flex: 1; }
+h2 { font-weight: 400; border-bottom: 1px solid var(--cor-borda); padding-bottom: 10px; margin-top:0; }
+.chamados-list { display: flex; flex-direction: column; gap: 15px; }
+.chamado-item {
+    display: block;
+    padding: 15px;
+    border: 1px solid var(--cor-borda);
+    border-left-width: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: background-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.chamado-item:hover { 
+    background-color: #fdfdfd; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+.chamado-item h3 { margin: 0 0 10px 0; color: var(--cor-primaria); }
+.chamado-item p { margin: 5px 0; color: var(--cor-texto-suave); }
+.chamado-item small { color: var(--cor-texto-suave); }
+.status-aberto { border-left-color: var(--cor-status-aberto); }
+.status-pendente { border-left-color: var(--cor-status-pendente); }
+.status-fechado { border-left-color: var(--cor-status-fechado); }
+.ultima-resposta {
+    font-size: 0.9em;
+    color: #555;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border-left: 3px solid var(--cor-borda);
+}
+
+/* --- BOTÕES E FORMULÁRIOS --- */
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor-primaria);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.2s;
+}
+.button:hover { background-color: var(--cor-primaria-hover); }
+.button.novo-chamado { width: 100%; box-sizing: border-box; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input[type="text"], .form-group textarea, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+.form-group input[readonly] { background-color: #e9ecef; }
+
+/* --- INTERAÇÕES E DETALHES --- */
+.interacoes { margin-top: 20px; border-top: 1px solid var(--cor-borda); padding-top: 20px; }
+.interacao-item { padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 1px solid var(--cor-borda); }
+.interacao-item.user { background-color: #e7f3ff; }
+.interacao-item.nutic { background-color: var(--cor-fundo); }
+.interacao-item p { margin: 0; }
+
+/* --- ATUALIZAÇÃO EM TEMPO REAL --- */
+@keyframes fadeInHighlight {
+    from { background-color: var(--cor-destaque-novo); }
+    to { background-color: transparent; }
+}
+.chamado-item.novo-item, .interacao-item.novo-item, #status-display.novo-item {
+    animation: fadeInHighlight 2s ease-out;
+}
+
+/* --- RODAPÉ DE INSTRUÇÕES --- */
+.instrucoes-footer {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: transparent;
+    border-radius: 8px;
+    color: var(--cor-texto-suave);
+}
+.instrucoes-footer h4 { margin-top: 0; }
+
+/* --- ESTILO PARA CHAMADOS ATUALIZADOS --- */
+.chamado-item.destacado {
+    background-color: #fff3cd; /* Amarelo claro de destaque */
+    border-left-color: #ffc107;
+    animation: fadeInHighlight 1.5s ease-out;
+}
+
+/* Adicionar ao seu CSS */
+.caixa-metricas {
+    display: flex;
+    gap: 20px;
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.caixa-metricas div {
+    font-size: 1.1em;
+}
+.caixa-metricas strong {
+    color: var(--cor-primaria);
+    font-size: 1.2em;
+}
+
+/* --- ESTILOS PARA A PÁGINA DE LOGIN --- */
+.container-login { max-width: 500px; margin: 40px auto; padding: 30px; background-color: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 8px; }
+.form-login h2 { text-align: center; font-weight: 300; font-size: 1.8em; margin-top: 0; }
+.form-login p { text-align: center; color: var(--cor-texto-suave); line-height: 1.5; }
+.form-group-checkbox { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.form-group-checkbox input[type="checkbox"] { width: auto; }
+.form-group-checkbox label { margin-bottom: 0; font-weight: normal; }
+.mensagem-erro { padding: 15px; background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; border-radius: 5px; }
+
+/* --- ESTILOS PARA O BOTÃO DE CARREGANDO --- */
+
+/* Estilo do botão quando está em modo de carregamento */
+.btn-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0.7;
+    cursor: not-allowed !important;
+}
+
+/* O ícone de spinner (círculo que gira) */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #ffffff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* Animação que faz o spinner girar */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- ESTILO PARA MENSAGEM DE AVISO NO LOGIN --- */
+.mensagem-aviso {
+    font-size: 0.9em;
+    padding: 10px;
+    background-color: #fff3cd; /* Amarelo claro */
+    color: #856404; /* Marrom escuro */
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    margin-top: -10px; /* Puxa para mais perto da checkbox */
+    margin-bottom: 20px;
+    text-align: center;
+}

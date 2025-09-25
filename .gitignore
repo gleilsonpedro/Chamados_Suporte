@@ -1,0 +1,16 @@
+# Arquivo de configuração com senhas e dados sensíveis
+config.php
+
+# Pasta de uploads dos usuários (ignora o conteúdo, mas mantém a pasta se vazia)
+/uploads/*
+!/uploads/.gitkeep
+
+# Arquivos de log e de depuração que criamos
+debug_log.txt
+teste_log.txt
+criar_admin.php
+
+# Arquivos de sistema operacional e IDEs (boa prática)
+.DS_Store
+/vendor/
+composer.lock

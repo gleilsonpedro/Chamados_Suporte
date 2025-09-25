@@ -1,0 +1,22 @@
+<?php
+// Configurações do Banco de Dados
+define('DB_SERVER', 'localhost');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'nutic_chamados');
+
+// Tenta conectar ao banco de dados
+$conexao = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+if($conexao->connect_error){ die("ERRO FATAL NA CONEXÃO: " . $conexao->connect_error); }
+$conexao->set_charset("utf8mb4");
+
+// --- CONFIGURAÇÕES DE E-MAIL (PHPMailer) ---
+define('SMTP_HOST', 'smtp.example.com');      
+define('SMTP_USERNAME', 'seu-email@example.com');
+define('SMTP_PASSWORD', 'sua-senha-de-app');
+define('SMTP_PORT', 587);
+define('SMTP_SECURE', 'tls');
+define('ADMIN_EMAIL', 'admin@example.com');
+define('ADMIN_NAME', 'Nome do Administrador');
+?>

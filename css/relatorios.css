@@ -1,0 +1,125 @@
+/* --- ESTILOS PARA PÁGINA DE RELATÓRIOS --- */
+.form-filtros {
+    display: flex;
+    gap: 20px;
+    align-items: flex-end;
+    padding: 20px;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.filtro-item {
+    display: flex;
+    flex-direction: column;
+}
+.filtro-item label {
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+.filtro-item select, .filtro-item input[type="date"] {
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 5px;
+}
+.area-relatorio {
+    border-top: 1px solid var(--cor-borda);
+    padding-top: 20px;
+}
+.header-relatorio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.tabela-relatorio {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.tabela-relatorio th, .tabela-relatorio td {
+    border: 1px solid var(--cor-borda);
+    padding: 12px;
+    text-align: left;
+}
+.tabela-relatorio thead {
+    background-color: var(--cor-fundo);
+}
+.tabela-relatorio tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Estilos para Impressão */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .area-relatorio, .area-relatorio * {
+        visibility: visible;
+    }
+    .area-relatorio {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Adicionar ao seu CSS */
+.caixa-metricas {
+    display: flex;
+    gap: 20px;
+    background-color: var(--cor-fundo);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.caixa-metricas div {
+    font-size: 1.1em;
+}
+.caixa-metricas strong {
+    color: var(--cor-primaria);
+    font-size: 1.2em;
+}
+
+/* --- ESTILOS PARA O CABEÇALHO DE IMPRESSÃO --- */
+
+/* Por padrão, o cabeçalho de impressão fica invisível na tela */
+.header-impressao {
+    display: none;
+}
+
+/* Estilos que SÓ se aplicam na hora de imprimir */
+@media print {
+    /* Esconde o cabeçalho principal da tela */
+    .site-header {
+        display: none !important;
+    }
+    
+    /* Mostra e estiliza o cabeçalho de impressão */
+    .header-impressao {
+        display: flex !important; /* Importante para sobrepor a regra de 'display: none' */
+        align-items: center;
+        gap: 15px;
+        border-bottom: 2px solid #666;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+    .header-impressao .logo {
+        font-size: 2.5em;
+        color: black;
+    }
+    .header-impressao .titles h1 {
+        margin: 0;
+        color: black;
+        font-size: 1.8em;
+    }
+    .header-impressao .titles p {
+        margin: 0;
+        color: #444;
+        font-weight: 300;
+    }
+}
