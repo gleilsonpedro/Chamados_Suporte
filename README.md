@@ -7,8 +7,7 @@
 Um sistema de help desk completo e funcional, desenvolvido para a gestão de chamados internos do setor de T.I. , otimizado para rodar em um ambiente de servidor local com XAMPP e compatível com versões mais antigas de PHP.
 
 ### Demonstração do Sistema
-*(Aqui é o lugar perfeito para você colocar o seu GIF!)*
-![Demonstração do Sistema de Chamados](caminho/para/seu/gif_ou_imagem.gif)
+(![Demonstração do Sistema de Chamados](demonstracao.gif))
 
 ---
 
@@ -69,7 +68,7 @@ Este projeto foi criado para solucionar a necessidade de um controle centralizad
 |   |-- .gitkeep (para manter a pasta no Git)
 |-- .gitignore
 |-- api_updates.php
-|-- config.php.example (Arquivo de exemplo, o original é ignorado)
+|-- config.php.example (Arquivo de exemplo)
 |-- criar_admin.php (Script de uso único para criar admin)
 |-- index.php
 |-- login_admin.php
@@ -98,7 +97,7 @@ Este projeto foi criado para solucionar a necessidade de um controle centralizad
     -   Acesse `http://localhost/phpmyadmin`.
     -   Crie um novo banco de dados chamado `nutic_chamados`.
     -   Selecione o banco e vá para a aba **"SQL"**.
-    -   Copie e execute o script SQL completo fornecido no início deste README.
+    -   Copie e execute o script SQL completo fornecido no SQL.txt.
 5.  **Configuração Segura (MUITO IMPORTANTE):**
     -   Na pasta do projeto, encontre o arquivo `config.php.example`.
     -   Faça uma cópia dele e renomeie para `config.php`.
