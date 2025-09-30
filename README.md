@@ -1,4 +1,4 @@
-# Sistema de Chamados Interno - NUTIC-SVO
+# Sistema de Chamados Interno - TI
 
 ![Versão PHP](https://img.shields.io/badge/PHP-5.6%2B-blue.svg)
 ![MariaDB](https://img.shields.io/badge/MariaDB-10.1%2B-orange.svg)
